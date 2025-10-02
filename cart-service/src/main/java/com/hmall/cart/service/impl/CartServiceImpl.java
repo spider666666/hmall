@@ -3,13 +3,15 @@ package com.hmall.cart.service.impl;
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.hmall.api.client.ItemClient;
+import com.hmall.api.dto.ItemDTO;
 import com.hmall.cart.domain.dto.CartFormDTO;
-import com.hmall.cart.domain.dto.ItemDTO;
+
+
 import com.hmall.cart.domain.po.Cart;
 import com.hmall.cart.domain.vo.CartVO;
 import com.hmall.cart.mapper.CartMapper;
 import com.hmall.cart.service.ICartService;
-import com.hmall.cart.service.IItemService;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
 import com.hmall.common.utils.CollUtils;
@@ -21,7 +23,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
@@ -34,9 +35,14 @@ import java.util.stream.Collectors;
  */
 @Service
 @RequiredArgsConstructor
+
 public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements ICartService {
 
-    private final IItemService itemService;
+//    private final DiscoveryClient discoveryClient;
+//
+//    private final RestTemplate restTemplate;
+
+    private final ItemClient itemClient;
 
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
@@ -64,7 +70,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     @Override
     public List<CartVO> queryMyCarts() {
         // 1.查询我的购物车列表
-        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
+        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, 1L/*UserContext.getUser()*/).list();
         if (CollUtils.isEmpty(carts)) {
             return CollUtils.emptyList();
         }
@@ -80,20 +86,52 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     }
 
     private void handleCartItems(List<CartVO> vos) {
+
+
+
+
+
         // 1.获取商品id
         Set<Long> itemIds = vos.stream().map(CartVO::getItemId).collect(Collectors.toSet());
-        // 2.查询商品
-        List<ItemDTO> items = itemService.queryItemByIds(itemIds);
-        if (CollUtils.isEmpty(items)) {
+
+        //优化方法：直接使用openfeign来进行远程调用
+        List<ItemDTO> items = itemClient.getItemsByids(itemIds);//使用向上转型的方法，使得参数可以正常传递
+
+
+//        //2.获取服务实例
+//        List<ServiceInstance> instances = discoveryClient.getInstances("item-service");
+//
+//        if (CollUtils.isEmpty(instances)){
+//            return;
+//        }
+//        //使用负载均衡
+//        ServiceInstance serviceInstance = instances.get(RandomUtil.randomInt(instances.size()));
+//        //配合使用resttemplate实现远程调用
+//
+//        ResponseEntity<List<ItemDTO>> response = restTemplate.exchange(
+//                serviceInstance.getUri() + "/items?ids={ids}",  // 注意URL需要包含{ids}占位符
+//                HttpMethod.GET,
+//                null,
+//                new ParameterizedTypeReference<List<ItemDTO>>() {},
+//                Map.of("ids", CollUtil.join(itemIds, ","))  // 路径变量参数
+//        );
+//        //3.判断响应是否失败
+//        if(!response.getStatusCode().is2xxSuccessful()){
+//            //查询失败，直接返回
+//            return;
+//        }
+//        List<ItemDTO> items = response.getBody();
+        if(CollUtils.isEmpty(items)){
             return;
         }
-        // 3.转为 id 到 item的map
-        Map<Long, ItemDTO> itemMap = items.stream().collect(Collectors.toMap(ItemDTO::getId, Function.identity()));
+
+        //4.转为 id 到 item的map
+        Map<Long, ItemDTO> itemMap = items.stream().collect(Collectors.toMap(ItemDTO::getId, itemdto -> itemdto));
         // 4.写入vo
         for (CartVO v : vos) {
             ItemDTO item = itemMap.get(v.getItemId());
             if (item == null) {
-                continue;
+               continue;
             }
             v.setNewPrice(item.getPrice());
             v.setStatus(item.getStatus());

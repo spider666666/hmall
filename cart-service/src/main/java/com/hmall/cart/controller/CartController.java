@@ -9,12 +9,14 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 
+@Slf4j
 @Api(tags = "购物车相关接口")
 @RestController
 @RequestMapping("/carts")
@@ -43,6 +45,7 @@ public class CartController {
     @ApiOperation("查询购物车列表")
     @GetMapping
     public List<CartVO> queryMyCarts(){
+        log.info("正在查询购物车");
         return cartService.queryMyCarts();
     }
     @ApiOperation("批量删除购物车中商品")

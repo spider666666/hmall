@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cart-service</artifactId>
+    <artifactId>hm-api</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -23,36 +23,6 @@
             <artifactId>hm-common</artifactId>
             <version>1.0.0</version>
         </dependency>
-        <!--web-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!--数据库-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
-        <!--mybatis-->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-        </dependency>
-        <!--单元测试-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-        <!--redis-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <!--nacos注册发现(客户端)-->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
         <!--openfeign核心依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -63,15 +33,10 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
+        <!--连接池依赖-->
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-okhttp</artifactId>
-        </dependency>
-        <!--hm-api-->
-        <dependency>
-            <groupId>com.heima</groupId>
-            <artifactId>hm-api</artifactId>
-            <version>1.0.0</version>
         </dependency>
 
     </dependencies>
