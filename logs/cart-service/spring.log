@@ -38,3 +38,6 @@
 13:36:20:052  INFO 16888 --- [main] com.hmall.cart.CartServiceApplication    : Started CartServiceApplication in 8.982 seconds (JVM running for 9.758)
 13:36:20:078  INFO 16888 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [a1f78e31-46fc-4bbf-a6c0-903b36c1b577] Receive server push request, request = NotifySubscriberRequest, requestId = 120
 13:36:20:082  INFO 16888 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [a1f78e31-46fc-4bbf-a6c0-903b36c1b577] Ack server push request, request = NotifySubscriberRequest, requestId = 120
+14:15:20:022  INFO 16888 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:15:20:025  INFO 16888 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+14:15:20:034  INFO 16888 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms

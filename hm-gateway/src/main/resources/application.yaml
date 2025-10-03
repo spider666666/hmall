@@ -13,6 +13,7 @@ spring:
           uri: lb://item-service
           predicates:
             - Path=/items/**,/search/**
+
         - id: user-service
           uri: lb://user-service
           predicates:
