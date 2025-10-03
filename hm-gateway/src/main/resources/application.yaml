@@ -1,0 +1,29 @@
+server:
+  port: 8080
+#进行spring的相关配置
+spring:
+  application:
+    name: hm-gateway
+  cloud:
+    nacos:
+      server-addr: 106.12.165.235:8848
+    gateway:
+      routes:
+        - id: item-service
+          uri: lb://item-service
+          predicates:
+            - Path=/items/**,/search/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/users/**
+logging:
+
+#  以下是网关的设置，用来排查实在哪里除了问题，在这里看见服务已经匹配成功，但是请求没有被路由到服务实例
+  level:
+    # Gateway核心组件日志
+    org.springframework.cloud.gateway: debug
+    # 新增：Nacos服务发现日志
+    com.alibaba.cloud.nacos.discovery: debug
+    # 新增：负载均衡客户端日志
+    org.springframework.cloud.loadbalancer: debug

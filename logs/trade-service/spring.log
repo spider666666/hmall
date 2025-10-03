@@ -1,188 +1,41 @@
-16:20:51:634  INFO 14204 --- [main] com.hmall.trade.TradeServiceApplication  : Starting TradeServiceApplication using Java 17.0.15 on CHINAMI-I6Q082V with PID 14204 (D:\学习\开发\hmall\trade-service\target\classes started by Administrator in D:\学习\开发\hmall)
-16:20:51:639 DEBUG 14204 --- [main] com.hmall.trade.TradeServiceApplication  : Running with Spring Boot v2.7.12, Spring v5.3.27
-16:20:51:640  INFO 14204 --- [main] com.hmall.trade.TradeServiceApplication  : The following 1 profile is active: "local"
-16:20:52:469  INFO 14204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-16:20:52:472  INFO 14204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-16:20:52:497  INFO 14204 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
-16:20:52:646  WARN 14204 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.hmall.trade]' package. Please check your configuration.
-16:20:52:730  INFO 14204 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6b77457e-ad31-35c0-b39b-0927ddb16009
-16:20:53:119  INFO 14204 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-16:20:53:126  INFO 14204 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:20:53:126  INFO 14204 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-16:20:53:253  INFO 14204 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:20:53:253  INFO 14204 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1557 ms
-16:20:53:439  INFO 14204 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
-16:20:53:622  WARN 14204 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [D:\学习\开发\hmall\trade-service\target\classes\com\hmall\trade\controller\OrderController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl' defined in file [D:\学习\开发\hmall\trade-service\target\classes\com\hmall\trade\service\impl\OrderServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderDetailServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hmall.trade.mapper.OrderDetailMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-16:20:53:626  INFO 14204 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-16:20:53:645  INFO 14204 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-16:20:53:670 ERROR 14204 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController' defined in file [D:\学习\开发\hmall\trade-service\target\classes\com\hmall\trade\controller\OrderController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl' defined in file [D:\学习\开发\hmall\trade-service\target\classes\com\hmall\trade\service\impl\OrderServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderDetailServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hmall.trade.mapper.OrderDetailMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
-	at com.hmall.trade.TradeServiceApplication.main(TradeServiceApplication.java:12) ~[classes/:na]
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderServiceImpl' defined in file [D:\学习\开发\hmall\trade-service\target\classes\com\hmall\trade\service\impl\OrderServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderDetailServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hmall.trade.mapper.OrderDetailMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.27.jar:5.3.27]
-	... 19 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderDetailServiceImpl': Unsatisfied dependency expressed through field 'baseMapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hmall.trade.mapper.OrderDetailMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:660) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1391) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.27.jar:5.3.27]
-	... 33 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.hmall.trade.mapper.OrderDetailMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1801) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1357) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1311) ~[spring-beans-5.3.27.jar:5.3.27]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:657) ~[spring-beans-5.3.27.jar:5.3.27]
-	... 48 common frames omitted
-
-16:21:39:680  INFO 2068 --- [main] com.hmall.trade.TradeServiceApplication  : Starting TradeServiceApplication using Java 17.0.15 on CHINAMI-I6Q082V with PID 2068 (D:\学习\开发\hmall\trade-service\target\classes started by Administrator in D:\学习\开发\hmall)
-16:21:39:682 DEBUG 2068 --- [main] com.hmall.trade.TradeServiceApplication  : Running with Spring Boot v2.7.12, Spring v5.3.27
-16:21:39:682  INFO 2068 --- [main] com.hmall.trade.TradeServiceApplication  : The following 1 profile is active: "local"
-16:21:40:459  INFO 2068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-16:21:40:461  INFO 2068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-16:21:40:480  INFO 2068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-16:21:40:712  INFO 2068 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3f5c487c-82e3-3291-b14d-98dd906ad760
-16:21:41:095  INFO 2068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-16:21:41:106  INFO 2068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:21:41:106  INFO 2068 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-16:21:41:232  INFO 2068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:21:41:233  INFO 2068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1504 ms
-16:21:41:430  INFO 2068 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
-16:21:41:921  INFO 2068 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-16:21:42:553  INFO 2068 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-16:21:43:190  INFO 2068 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 524203c0-8cf8-41b8-8b8d-942045c8cc58
-16:21:43:242  INFO 2068 --- [main] org.reflections.Reflections              : Reflections took 26 ms to scan 1 urls, producing 3 keys and 6 values 
-16:21:43:261  INFO 2068 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 4 keys and 9 values 
-16:21:43:267  INFO 2068 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 3 keys and 10 values 
-16:21:43:269  WARN 2068 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-16:21:43:277  INFO 2068 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 1 keys and 5 values 
-16:21:43:283  INFO 2068 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 1 keys and 7 values 
-16:21:43:289  INFO 2068 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 2 keys and 8 values 
-16:21:43:293  WARN 2068 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-16:21:43:295  INFO 2068 --- [main] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] RpcClient init label, labels = {module=naming, source=sdk}
-16:21:43:297  INFO 2068 --- [main] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-16:21:43:297  INFO 2068 --- [main] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-16:21:43:297  INFO 2068 --- [main] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-16:21:43:299  INFO 2068 --- [main] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] Try to connect to server on start up, server: {serverIp = '106.12.165.235', server main port = 8848}
-16:21:44:380  INFO 2068 --- [main] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] Success to connect to server [106.12.165.235:8848] on start up, connectionId = 1759393299201_183.230.12.181_5050
-16:21:44:384  INFO 2068 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] Notify connected event to listeners.
-16:21:44:384  INFO 2068 --- [main] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-16:21:44:386  INFO 2068 --- [main] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1141/0x000001bf228dc7d0
-16:21:44:503  INFO 2068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-16:21:44:571  INFO 2068 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 10.17.143.21:8085 register finished
-16:21:44:747  INFO 2068 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-16:21:44:750  INFO 2068 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-16:21:44:773  INFO 2068 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-16:21:44:859  INFO 2068 --- [main] com.hmall.trade.TradeServiceApplication  : Started TradeServiceApplication in 5.863 seconds (JVM running for 6.425)
-16:21:45:052  INFO 2068 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] Receive server push request, request = NotifySubscriberRequest, requestId = 68
-16:21:45:056  INFO 2068 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [524203c0-8cf8-41b8-8b8d-942045c8cc58] Ack server push request, request = NotifySubscriberRequest, requestId = 68
-16:24:57:227  WARN 2068 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-16:24:57:227  WARN 2068 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-16:24:57:228  WARN 2068 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-16:24:57:228  WARN 2068 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-16:24:57:338  INFO 2068 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registering from Nacos Server now...
-16:24:57:394  INFO 2068 --- [SpringApplicationShutdownHook] c.a.c.n.registry.NacosServiceRegistry    : De-registration finished.
-16:24:57:700  INFO 2068 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown rpc client, set status to shutdown
-16:24:57:701  INFO 2068 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@79a5a130[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
-16:24:57:701  INFO 2068 --- [SpringApplicationShutdownHook] com.alibaba.nacos.common.remote.client   : Close current connection 1759393299201_183.230.12.181_5050
-16:24:57:704  INFO 2068 --- [SpringApplicationShutdownHook] c.a.n.c.remote.client.grpc.GrpcClient    : Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@57341b18[Running, pool size = 8, active threads = 0, queued tasks = 0, completed tasks = 55]
-16:25:02:564  INFO 14444 --- [main] com.hmall.trade.TradeServiceApplication  : Starting TradeServiceApplication using Java 17.0.15 on CHINAMI-I6Q082V with PID 14444 (D:\学习\开发\hmall\trade-service\target\classes started by Administrator in D:\学习\开发\hmall)
-16:25:02:566 DEBUG 14444 --- [main] com.hmall.trade.TradeServiceApplication  : Running with Spring Boot v2.7.12, Spring v5.3.27
-16:25:02:566  INFO 14444 --- [main] com.hmall.trade.TradeServiceApplication  : The following 1 profile is active: "local"
-16:25:03:269  INFO 14444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-16:25:03:271  INFO 14444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-16:25:03:289  INFO 14444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-16:25:03:488  INFO 14444 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3f5c487c-82e3-3291-b14d-98dd906ad760
-16:25:03:910  INFO 14444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
-16:25:03:929  INFO 14444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-16:25:03:929  INFO 14444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-16:25:04:129  INFO 14444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-16:25:04:129  INFO 14444 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1526 ms
-16:25:04:303  INFO 14444 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
-16:25:04:761  INFO 14444 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-16:25:05:332  INFO 14444 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-16:25:05:940  INFO 14444 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 3cd16b45-302b-4f9a-8406-083f436239c9
-16:25:05:990  INFO 14444 --- [main] org.reflections.Reflections              : Reflections took 34 ms to scan 1 urls, producing 3 keys and 6 values 
-16:25:06:012  INFO 14444 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 4 keys and 9 values 
-16:25:06:019  INFO 14444 --- [main] org.reflections.Reflections              : Reflections took 3 ms to scan 1 urls, producing 3 keys and 10 values 
-16:25:06:019  WARN 14444 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-16:25:06:025  INFO 14444 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 5 values 
-16:25:06:035  INFO 14444 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 1 keys and 7 values 
-16:25:06:035  INFO 14444 --- [main] org.reflections.Reflections              : Reflections took 0 ms to scan 1 urls, producing 2 keys and 8 values 
-16:25:06:035  WARN 14444 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-16:25:06:035  INFO 14444 --- [main] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] RpcClient init label, labels = {module=naming, source=sdk}
-16:25:06:035  INFO 14444 --- [main] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-16:25:06:035  INFO 14444 --- [main] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-16:25:06:035  INFO 14444 --- [main] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-16:25:06:035  INFO 14444 --- [main] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] Try to connect to server on start up, server: {serverIp = '106.12.165.235', server main port = 8848}
-16:25:07:065  INFO 14444 --- [main] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] Success to connect to server [106.12.165.235:8848] on start up, connectionId = 1759393501871_183.230.12.181_5049
-16:25:07:068  INFO 14444 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] Notify connected event to listeners.
-16:25:07:068  INFO 14444 --- [main] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-16:25:07:068  INFO 14444 --- [main] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1141/0x000002060c8a8ff0
-16:25:07:178  INFO 14444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
-16:25:07:235  INFO 14444 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 10.17.143.21:8085 register finished
-16:25:07:409  INFO 14444 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-16:25:07:419  INFO 14444 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-16:25:07:438  INFO 14444 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-16:25:07:504  INFO 14444 --- [main] com.hmall.trade.TradeServiceApplication  : Started TradeServiceApplication in 5.582 seconds (JVM running for 6.18)
-16:25:07:715  INFO 14444 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] Receive server push request, request = NotifySubscriberRequest, requestId = 74
-16:25:07:715  INFO 14444 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [3cd16b45-302b-4f9a-8406-083f436239c9] Ack server push request, request = NotifySubscriberRequest, requestId = 74
-16:25:50:682  INFO 14444 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-16:25:50:682  INFO 14444 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-16:25:50:684  INFO 14444 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-16:26:12:914  WARN 14444 --- [http-nio-8085-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; nested exception is java.lang.NumberFormatException: For input string: "1L"]
-16:26:16:456  INFO 14444 --- [http-nio-8085-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-16:26:18:851  INFO 14444 --- [http-nio-8085-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-16:26:18:867 DEBUG 14444 --- [http-nio-8085-exec-5] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
-16:26:18:922 DEBUG 14444 --- [http-nio-8085-exec-5] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1(Long)
-16:26:19:021 DEBUG 14444 --- [http-nio-8085-exec-5] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 0
-16:26:48:204 DEBUG 14444 --- [http-nio-8085-exec-7] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
-16:26:48:205 DEBUG 14444 --- [http-nio-8085-exec-7] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 123865420(Long)
-16:26:48:268 DEBUG 14444 --- [http-nio-8085-exec-7] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+13:36:17:052  INFO 9948 --- [main] com.hmall.trade.TradeServiceApplication  : Starting TradeServiceApplication using Java 17.0.15 on CHINAMI-I6Q082V with PID 9948 (D:\学习\开发\hmall\trade-service\target\classes started by Administrator in D:\学习\开发\hmall)
+13:36:17:059 DEBUG 9948 --- [main] com.hmall.trade.TradeServiceApplication  : Running with Spring Boot v2.7.12, Spring v5.3.27
+13:36:17:059  INFO 9948 --- [main] com.hmall.trade.TradeServiceApplication  : The following 1 profile is active: "local"
+13:36:18:099  INFO 9948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+13:36:18:104  INFO 9948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:36:18:137  INFO 9948 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+13:36:18:393  INFO 9948 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=718da0ec-32b9-363f-80cc-8e4c018d17ea
+13:36:18:940  INFO 9948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+13:36:18:956  INFO 9948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+13:36:18:957  INFO 9948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+13:36:19:134  INFO 9948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+13:36:19:134  INFO 9948 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2029 ms
+13:36:19:399  INFO 9948 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+13:36:20:060  INFO 9948 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+13:36:21:036  INFO 9948 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+13:36:21:972  INFO 9948 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 9f42df40-fdb5-4e35-971e-9b5489a3ba7c
+13:36:22:096  INFO 9948 --- [main] org.reflections.Reflections              : Reflections took 53 ms to scan 1 urls, producing 3 keys and 6 values 
+13:36:22:146  INFO 9948 --- [main] org.reflections.Reflections              : Reflections took 20 ms to scan 1 urls, producing 4 keys and 9 values 
+13:36:22:165  INFO 9948 --- [main] org.reflections.Reflections              : Reflections took 13 ms to scan 1 urls, producing 3 keys and 10 values 
+13:36:22:169  WARN 9948 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+13:36:22:181  INFO 9948 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 1 keys and 5 values 
+13:36:22:195  INFO 9948 --- [main] org.reflections.Reflections              : Reflections took 11 ms to scan 1 urls, producing 1 keys and 7 values 
+13:36:22:212  INFO 9948 --- [main] org.reflections.Reflections              : Reflections took 11 ms to scan 1 urls, producing 2 keys and 8 values 
+13:36:22:217  WARN 9948 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+13:36:22:218  INFO 9948 --- [main] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] RpcClient init label, labels = {module=naming, source=sdk}
+13:36:22:222  INFO 9948 --- [main] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+13:36:22:223  INFO 9948 --- [main] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+13:36:22:223  INFO 9948 --- [main] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+13:36:22:226  INFO 9948 --- [main] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] Try to connect to server on start up, server: {serverIp = '106.12.165.235', server main port = 8848}
+13:36:23:634  INFO 9948 --- [main] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] Success to connect to server [106.12.165.235:8848] on start up, connectionId = 1759469782265_183.230.12.230_9425
+13:36:23:635  INFO 9948 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] Notify connected event to listeners.
+13:36:23:635  INFO 9948 --- [main] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+13:36:23:636  INFO 9948 --- [main] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1141/0x000001a5448a8a98
+13:36:23:754  INFO 9948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+13:36:23:830  INFO 9948 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 10.17.11.108:8085 register finished
+13:36:24:049  INFO 9948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+13:36:24:051  INFO 9948 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+13:36:24:070  INFO 9948 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+13:36:24:153  INFO 9948 --- [main] com.hmall.trade.TradeServiceApplication  : Started TradeServiceApplication in 7.994 seconds (JVM running for 8.652)
+13:36:24:263  INFO 9948 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] Receive server push request, request = NotifySubscriberRequest, requestId = 122
+13:36:24:265  INFO 9948 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [9f42df40-fdb5-4e35-971e-9b5489a3ba7c] Ack server push request, request = NotifySubscriberRequest, requestId = 122
