@@ -630,3 +630,15 @@ java.lang.IllegalArgumentException: 用户名错误
 17:07:14:561  INFO 22124 --- [main] com.hmall.user.UserServiceApplication    : Started UserServiceApplication in 6.586 seconds (JVM running for 7.091)
 17:07:14:749  INFO 22124 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [809f1b5f-2286-4988-b1da-2e0f79dcce74] Receive server push request, request = NotifySubscriberRequest, requestId = 370
 17:07:14:755  INFO 22124 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [809f1b5f-2286-4988-b1da-2e0f79dcce74] Ack server push request, request = NotifySubscriberRequest, requestId = 370
+20:15:46:365  INFO 22124 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:15:46:370  INFO 22124 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+20:15:46:408  INFO 22124 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 38 ms
+20:15:46:921  WARN 22124 --- [http-nio-8084-exec-1] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @477b4cdf
+20:15:46:959  INFO 22124 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+20:15:48:243  INFO 22124 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+20:15:48:263 DEBUG 22124 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+20:15:48:328 DEBUG 22124 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+20:15:48:446 DEBUG 22124 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+20:16:13:094 DEBUG 22124 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+20:16:13:094 DEBUG 22124 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+20:16:13:153 DEBUG 22124 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
