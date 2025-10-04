@@ -11,6 +11,7 @@ import com.hmall.cart.domain.dto.CartFormDTO;
 import com.hmall.cart.domain.po.Cart;
 import com.hmall.cart.domain.vo.CartVO;
 import com.hmall.cart.mapper.CartMapper;
+import com.hmall.cart.proprities.CartProprity;
 import com.hmall.cart.service.ICartService;
 import com.hmall.common.exception.BizIllegalException;
 import com.hmall.common.utils.BeanUtils;
@@ -43,6 +44,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 //    private final RestTemplate restTemplate;
 
     private final ItemClient itemClient;
+
+    private final CartProprity cartProprity;
 
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
@@ -152,8 +155,8 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
 
     private void checkCartsFull(Long userId) {
         int count = Math.toIntExact(lambdaQuery().eq(Cart::getUserId, userId).count());
-        if (count >= 10) {
-            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", 10));
+        if (count >= cartProprity.getMaxItem()) {
+            throw new BizIllegalException(StrUtil.format("用户购物车课程不能超过{}", cartProprity.getMaxItem()));
         }
     }
 

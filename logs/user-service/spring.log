@@ -642,3 +642,6 @@ java.lang.IllegalArgumentException: 用户名错误
 20:16:13:094 DEBUG 22124 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
 20:16:13:094 DEBUG 22124 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
 20:16:13:153 DEBUG 22124 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+20:46:28:165 DEBUG 22124 --- [http-nio-8084-exec-4] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+20:46:28:166 DEBUG 22124 --- [http-nio-8084-exec-4] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+20:46:28:227 DEBUG 22124 --- [http-nio-8084-exec-4] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
