@@ -20,7 +20,7 @@ public interface ItemClient {
     List<ItemDTO> getItemsByids(@RequestParam("ids") Collection<Long> ids);
 
     //扣减库存远程调用
-    @PutMapping("//stock/deduct")
+    @PutMapping("/items/stock/deduct")
     void deductStock(@RequestBody List<OrderDetailDTO> detailDTOS);
 
 }
