@@ -18,7 +18,7 @@ public class UserInterceptor implements HandlerInterceptor {
         String userInfo = request.getHeader("user-info");
 
         //（判断是否存在）
-        if (!StrUtil.isNotBlank(userInfo)){
+        if (StrUtil.isNotBlank(userInfo)){
             //3.将用户信息存储到当前的threadlocal中
             UserContext.setUser(Long.valueOf(userInfo));
         }
@@ -32,4 +32,5 @@ public class UserInterceptor implements HandlerInterceptor {
         UserContext.removeUser();
 
     }
+    //注意:由于会清除threadlocal，所以微服务之间相互调用时是不会存在用户信息的
 }
