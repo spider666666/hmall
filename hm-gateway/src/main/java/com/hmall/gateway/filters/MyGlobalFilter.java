@@ -19,17 +19,13 @@ public class MyGlobalFilter implements GlobalFilter, Ordered {
 
         //1.获取请求
         ServerHttpRequest request = exchange.getRequest();
-
         //2.打印请求头
         HttpHeaders headers = request.getHeaders();
-        System.out.println("headers = " + headers);
-
         //3.放行
         return chain.filter(exchange);
-
     }
     @Override
     public int getOrder(){
-        return 0;
+        return 1;
     }
 }

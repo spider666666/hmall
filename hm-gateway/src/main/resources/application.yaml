@@ -18,6 +18,10 @@ spring:
           uri: lb://user-service
           predicates:
             - Path=/users/**
+        - id: cart-service
+          uri: lb://cart-service
+          predicates:
+            - Path=/carts/**
 logging:
 
 #  以下是网关的设置，用来排查实在哪里除了问题，在这里看见服务已经匹配成功，但是请求没有被路由到服务实例
@@ -28,3 +32,15 @@ logging:
     com.alibaba.cloud.nacos.discovery: debug
     # 新增：负载均衡客户端日志
     org.springframework.cloud.loadbalancer: debug
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /search/**
+      - /users/login
+      - /items/**
+      - /hi

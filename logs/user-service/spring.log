@@ -1,51 +1,202 @@
-13:36:14:320  INFO 21824 --- [main] com.hmall.user.UserServiceApplication    : Starting UserServiceApplication using Java 17.0.15 on CHINAMI-I6Q082V with PID 21824 (D:\学习\开发\hmall\user-service\target\classes started by Administrator in D:\学习\开发\hmall)
-13:36:14:329 DEBUG 21824 --- [main] com.hmall.user.UserServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
-13:36:14:329  INFO 21824 --- [main] com.hmall.user.UserServiceApplication    : The following 1 profile is active: "local"
-13:36:15:355  INFO 21824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-13:36:15:357  INFO 21824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-13:36:15:378  INFO 21824 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
-13:36:15:677  INFO 21824 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3dec83c5-ca88-337a-85c0-8d95c8aa7e0d
-13:36:16:172  INFO 21824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
-13:36:16:183  INFO 21824 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-13:36:16:184  INFO 21824 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-13:36:16:375  INFO 21824 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-13:36:16:376  INFO 21824 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1969 ms
-13:36:18:224  INFO 21824 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-13:36:19:254  INFO 21824 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of c27c1387-db2a-425b-a433-c7f4f224bcea
-13:36:19:330  INFO 21824 --- [main] org.reflections.Reflections              : Reflections took 35 ms to scan 1 urls, producing 3 keys and 6 values 
-13:36:19:356  INFO 21824 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 4 keys and 9 values 
-13:36:19:369  INFO 21824 --- [main] org.reflections.Reflections              : Reflections took 9 ms to scan 1 urls, producing 3 keys and 10 values 
-13:36:19:372  WARN 21824 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-13:36:19:378  INFO 21824 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
-13:36:19:387  INFO 21824 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 7 values 
-13:36:19:395  INFO 21824 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 2 keys and 8 values 
-13:36:19:399  WARN 21824 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-13:36:19:400  INFO 21824 --- [main] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] RpcClient init label, labels = {module=naming, source=sdk}
-13:36:19:403  INFO 21824 --- [main] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-13:36:19:403  INFO 21824 --- [main] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-13:36:19:403  INFO 21824 --- [main] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-13:36:19:408  INFO 21824 --- [main] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] Try to connect to server on start up, server: {serverIp = '106.12.165.235', server main port = 8848}
-13:36:21:020  INFO 21824 --- [main] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] Success to connect to server [106.12.165.235:8848] on start up, connectionId = 1759469779598_183.230.12.230_9423
-13:36:21:021  INFO 21824 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] Notify connected event to listeners.
-13:36:21:022  INFO 21824 --- [main] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-13:36:21:022  INFO 21824 --- [main] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1110/0x00000255018ed728
-13:36:21:133  INFO 21824 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
-13:36:21:204  INFO 21824 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 10.17.11.108:8084 register finished
-13:36:21:465  INFO 21824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-13:36:21:467  INFO 21824 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-13:36:21:490  INFO 21824 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-13:36:21:505  INFO 21824 --- [main] com.hmall.user.UserServiceApplication    : Started UserServiceApplication in 8.076 seconds (JVM running for 8.79)
-13:36:21:685  INFO 21824 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] Receive server push request, request = NotifySubscriberRequest, requestId = 121
-13:36:21:690  INFO 21824 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [c27c1387-db2a-425b-a433-c7f4f224bcea] Ack server push request, request = NotifySubscriberRequest, requestId = 121
-14:23:45:813  INFO 21824 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-14:23:45:814  INFO 21824 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-14:23:45:834  INFO 21824 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
-14:23:46:171  WARN 21824 --- [http-nio-8084-exec-1] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @1786f9d5
-14:23:46:198  INFO 21824 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-14:23:47:247  INFO 21824 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-14:23:47:270 DEBUG 21824 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
-14:23:47:358 DEBUG 21824 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
-14:23:47:487 DEBUG 21824 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
-14:24:14:716 DEBUG 21824 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
-14:24:14:718 DEBUG 21824 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
-14:24:14:773 DEBUG 21824 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+13:49:55:384  INFO 18096 --- [main] com.hmall.user.UserServiceApplication    : Starting UserServiceApplication using Java 17.0.15 on CHINAMI-I6Q082V with PID 18096 (D:\学习\开发\hmall\user-service\target\classes started by Administrator in D:\学习\开发\hmall)
+13:49:55:397 DEBUG 18096 --- [main] com.hmall.user.UserServiceApplication    : Running with Spring Boot v2.7.12, Spring v5.3.27
+13:49:55:398  INFO 18096 --- [main] com.hmall.user.UserServiceApplication    : The following 1 profile is active: "local"
+13:49:56:843  INFO 18096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+13:49:56:846  INFO 18096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+13:49:56:885  INFO 18096 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+13:49:57:341  INFO 18096 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=3dec83c5-ca88-337a-85c0-8d95c8aa7e0d
+13:49:58:360  INFO 18096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+13:49:58:381  INFO 18096 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+13:49:58:382  INFO 18096 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+13:49:58:737  INFO 18096 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+13:49:58:738  INFO 18096 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3255 ms
+13:50:03:138  INFO 18096 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+13:50:05:614  INFO 18096 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of c068a2c1-9587-43aa-b0b6-85a0a134e7dc
+13:50:05:793  INFO 18096 --- [main] org.reflections.Reflections              : Reflections took 65 ms to scan 1 urls, producing 3 keys and 6 values 
+13:50:05:849  INFO 18096 --- [main] org.reflections.Reflections              : Reflections took 20 ms to scan 1 urls, producing 4 keys and 9 values 
+13:50:05:882  INFO 18096 --- [main] org.reflections.Reflections              : Reflections took 26 ms to scan 1 urls, producing 3 keys and 10 values 
+13:50:05:889  WARN 18096 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+13:50:05:906  INFO 18096 --- [main] org.reflections.Reflections              : Reflections took 16 ms to scan 1 urls, producing 1 keys and 5 values 
+13:50:05:928  INFO 18096 --- [main] org.reflections.Reflections              : Reflections took 16 ms to scan 1 urls, producing 1 keys and 7 values 
+13:50:05:952  INFO 18096 --- [main] org.reflections.Reflections              : Reflections took 17 ms to scan 1 urls, producing 2 keys and 8 values 
+13:50:05:958  WARN 18096 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+13:50:05:960  INFO 18096 --- [main] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] RpcClient init label, labels = {module=naming, source=sdk}
+13:50:05:966  INFO 18096 --- [main] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+13:50:05:967  INFO 18096 --- [main] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+13:50:05:968  INFO 18096 --- [main] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+13:50:05:972  INFO 18096 --- [main] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] Try to connect to server on start up, server: {serverIp = '106.12.165.235', server main port = 8848}
+13:50:09:099  INFO 18096 --- [main] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] Success to connect to server [106.12.165.235:8848] on start up, connectionId = 1759557007415_183.230.12.169_7636
+13:50:09:101  INFO 18096 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] Notify connected event to listeners.
+13:50:09:102  INFO 18096 --- [main] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+13:50:09:102  INFO 18096 --- [main] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1111/0x0000022b8e8f1448
+13:50:09:283  INFO 18096 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+13:50:09:366  INFO 18096 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 10.17.32.120:8084 register finished
+13:50:09:805  INFO 18096 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] Receive server push request, request = NotifySubscriberRequest, requestId = 160
+13:50:09:811  INFO 18096 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [c068a2c1-9587-43aa-b0b6-85a0a134e7dc] Ack server push request, request = NotifySubscriberRequest, requestId = 160
+13:50:10:136  INFO 18096 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+13:50:10:141  INFO 18096 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+13:50:10:199  INFO 18096 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+13:50:10:222  INFO 18096 --- [main] com.hmall.user.UserServiceApplication    : Started UserServiceApplication in 16.694 seconds (JVM running for 18.242)
+14:06:12:720  INFO 18096 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:06:12:720  INFO 18096 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+14:06:12:720  INFO 18096 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+14:06:12:895  WARN 18096 --- [http-nio-8084-exec-1] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @1786f9d5
+14:06:12:912  INFO 18096 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+14:06:14:030  INFO 18096 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+14:06:14:042 DEBUG 18096 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+14:06:14:065 DEBUG 18096 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+14:06:14:147 DEBUG 18096 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+14:06:19:593 DEBUG 18096 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+14:06:19:595 DEBUG 18096 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+14:06:19:646 DEBUG 18096 --- [http-nio-8084-exec-2] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+15:11:09:925  WARN 18096 --- [http-nio-8084-exec-4] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2711da1d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:11:868  WARN 18096 --- [http-nio-8084-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@201e65f7 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:19:941  WARN 18096 --- [http-nio-8084-exec-4] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@59acb5d9 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:21:862 DEBUG 18096 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+15:11:21:864 DEBUG 18096 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+15:11:21:894  WARN 18096 --- [http-nio-8084-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@651cff90 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:21:921 DEBUG 18096 --- [http-nio-8084-exec-1] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+15:11:21:936 DEBUG 18096 --- [http-nio-8084-exec-5] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+15:11:21:936 DEBUG 18096 --- [http-nio-8084-exec-5] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+15:11:21:989 DEBUG 18096 --- [http-nio-8084-exec-5] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+15:11:28:324  WARN 18096 --- [http-nio-8084-exec-6] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@427f1002 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:28:378 DEBUG 18096 --- [http-nio-8084-exec-6] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+15:11:28:378 DEBUG 18096 --- [http-nio-8084-exec-6] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+15:11:28:438 DEBUG 18096 --- [http-nio-8084-exec-6] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+15:11:29:970  WARN 18096 --- [http-nio-8084-exec-4] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3522c39b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:29:985 ERROR 18096 --- [http-nio-8084-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30116ms.
+### The error may exist in com/hmall/user/mapper/UserMapper.java (best guess)
+### The error may involve com.hmall.user.mapper.UserMapper.selectList
+### The error occurred while executing a query
+### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30116ms.] with root cause
+
+com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481) ~[na:na]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:573) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ConnectionImpl.setNetworkTimeout(ConnectionImpl.java:2491) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.zaxxer.hikari.pool.PoolBase.setNetworkTimeout(PoolBase.java:566) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.isConnectionAlive(PoolBase.java:173) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:186) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.getConnection(HikariPool.java:162) ~[HikariCP-4.0.3.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:128) ~[HikariCP-4.0.3.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:159) ~[spring-jdbc-5.3.27.jar:5.3.27]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:117) ~[spring-jdbc-5.3.27.jar:5.3.27]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:80) ~[spring-jdbc-5.3.27.jar:5.3.27]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:337) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:62) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.10.jar:3.5.10]
+	at com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor.intercept(MybatisPlusInterceptor.java:81) ~[mybatis-plus-extension-3.5.3.1.jar:3.5.3.1]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:62) ~[mybatis-3.5.10.jar:3.5.10]
+	at jdk.proxy2/jdk.proxy2.$Proxy135.query(Unknown Source) ~[na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:151) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:145) ~[mybatis-3.5.10.jar:3.5.10]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.10.jar:3.5.10]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at jdk.proxy2/jdk.proxy2.$Proxy96.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224) ~[mybatis-spring-2.0.7.jar:2.0.7]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.executeForMany(MybatisMapperMethod.java:166) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:77) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$PlainMethodInvoker.invoke(MybatisMapperProxy.java:148) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at jdk.proxy2/jdk.proxy2.$Proxy101.selectList(Unknown Source) ~[na:na]
+	at com.baomidou.mybatisplus.core.mapper.BaseMapper.selectOne(BaseMapper.java:172) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at java.base/java.lang.invoke.MethodHandle.invokeWithArguments(MethodHandle.java:732) ~[na:na]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy$DefaultMethodInvoker.invoke(MybatisMapperProxy.java:162) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at jdk.proxy2/jdk.proxy2.$Proxy101.selectOne(Unknown Source) ~[na:na]
+	at com.baomidou.mybatisplus.extension.conditions.query.ChainQuery.lambda$one$cd9f9c92$1(ChainQuery.java:48) ~[mybatis-plus-extension-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.extension.conditions.ChainWrapper.execute(ChainWrapper.java:63) ~[mybatis-plus-extension-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.extension.conditions.query.ChainQuery.one(ChainQuery.java:48) ~[mybatis-plus-extension-3.5.3.1.jar:3.5.3.1]
+	at com.hmall.user.service.impl.UserServiceImpl.login(UserServiceImpl.java:46) ~[classes/:na]
+	at com.hmall.user.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$da72bc39.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.27.jar:5.3.27]
+	at com.hmall.user.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$449ff920.login(<generated>) ~[classes/:na]
+	at com.hmall.user.controller.UserController.login(UserController.java:25) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+15:11:30:850  WARN 18096 --- [http-nio-8084-exec-7] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@44426b10 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:30:906 DEBUG 18096 --- [http-nio-8084-exec-7] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+15:11:30:908 DEBUG 18096 --- [http-nio-8084-exec-7] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+15:11:30:968 DEBUG 18096 --- [http-nio-8084-exec-7] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+15:11:31:342  WARN 18096 --- [http-nio-8084-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@8fc7fac (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:31:342 DEBUG 18096 --- [http-nio-8084-exec-8] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+15:11:31:344 DEBUG 18096 --- [http-nio-8084-exec-8] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+15:11:31:398 DEBUG 18096 --- [http-nio-8084-exec-8] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+15:11:31:499  WARN 18096 --- [http-nio-8084-exec-9] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@558da59e (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:31:499 DEBUG 18096 --- [http-nio-8084-exec-9] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+15:11:31:499 DEBUG 18096 --- [http-nio-8084-exec-9] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+15:11:31:548 DEBUG 18096 --- [http-nio-8084-exec-9] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
+15:11:31:673  WARN 18096 --- [http-nio-8084-exec-10] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4d436194 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+15:11:31:673 DEBUG 18096 --- [http-nio-8084-exec-10] c.h.user.mapper.UserMapper.selectList    : ==>  Preparing: SELECT id,username,password,phone,create_time,update_time,status,balance FROM user WHERE (username = ?)
+15:11:31:675 DEBUG 18096 --- [http-nio-8084-exec-10] c.h.user.mapper.UserMapper.selectList    : ==> Parameters: Jack(String)
+15:11:31:716 DEBUG 18096 --- [http-nio-8084-exec-10] c.h.user.mapper.UserMapper.selectList    : <==      Total: 1
