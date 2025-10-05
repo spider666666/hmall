@@ -1,6 +1,6 @@
 spring:
   application:
-    name: cart-service
+    name: trade-service
   cloud:
     nacos:
       server-addr: 106.12.165.235:8848
