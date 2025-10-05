@@ -3,6 +3,9 @@ server:
 feign:
   okhttp:
     enabled: true
+#    打开流量监控的配置
+  sentinel:
+    enabled: true
 #   以下是对共享配置的填充，但是还需要拉取这些配置从nacos到本地（在这里，先完成springcloud的上下文初始化，接着完成springboot得到上下文初始化）
 #   但是nacos的地址时配置在application,yaml中的，无法找到nacos地址，因此需要起步的配置文件的读取bootstrap.yaml文件，基于nacosconfig来完成微服务的本地配置
 #   引入依赖，添加配置
@@ -12,3 +15,10 @@ hm:
   swagger:
     title: "黑马商城接口文档"
     package: com.hmall.cart.controller
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090
+      http-method-specify: true
